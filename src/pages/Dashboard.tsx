@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { useAuth } from '@/contexts/AuthContext';
 import DashboardLayout from '@/components/layout/DashboardLayout';
@@ -15,7 +14,7 @@ import { useNavigate } from 'react-router-dom';
 
 const RecentTestCard: React.FC<{ test: TestResult }> = ({ test }) => {
   const product = getProductById(test.productId);
-  const navigate = useNavigate();
+  const navigate = useNavigate(); // Added missing useNavigate hook
   
   return (
     <Card className="card-hover cursor-pointer" onClick={() => navigate('/test-data')}>
@@ -63,6 +62,7 @@ const Dashboard: React.FC = () => {
   const { user } = useAuth();
   const [chartData, setChartData] = useState<TestResult[]>(mockTestResults);
   const [timeRange, setTimeRange] = useState<'7days' | '30days' | '90days'>('7days');
+  const navigate = useNavigate();
   
   const dashboardData = getDashboardData();
   
