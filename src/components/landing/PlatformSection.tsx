@@ -2,7 +2,8 @@
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { Cpu, TrendingUp, Shield, Users } from 'lucide-react';
+import { Badge } from '@/components/ui/badge';
+import { Cpu, TrendingUp, Shield, Users, Brain } from 'lucide-react';
 
 const PlatformSection: React.FC = () => {
   const [activeLayer, setActiveLayer] = useState(0);
@@ -64,7 +65,7 @@ const PlatformSection: React.FC = () => {
       id: 'predict',
       name: 'PREDICT™ AI',
       color: '#F39C12',
-      icon: TrendingUp,
+      icon: Brain,
       title: 'Prevent Problems Before They Happen',
       features: [
         'Spoilage forecasting',
