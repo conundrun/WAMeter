@@ -91,22 +91,25 @@ const PlatformSection: React.FC = () => {
 
         {/* Layer Navigation */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {layers.map((layer, index) => (
-            <Button
-              key={layer.id}
-              onClick={() => setActiveLayer(index)}
-              style={{ 
-                backgroundColor: activeLayer === index ? layer.color : 'transparent',
-                color: activeLayer === index ? 'white' : layer.color,
-                borderColor: layer.color
-              }}
-              variant="outline"
-              className="px-6 py-3 transition-all duration-300"
-            >
-              <layer.icon className="mr-2 h-5 w-5" />
-              {layer.name}
-            </Button>
-          ))}
+          {layers.map((layer, index) => {
+            const IconComponent = layer.icon;
+            return (
+              <Button
+                key={layer.id}
+                onClick={() => setActiveLayer(index)}
+                style={{ 
+                  backgroundColor: activeLayer === index ? layer.color : 'transparent',
+                  color: activeLayer === index ? 'white' : layer.color,
+                  borderColor: layer.color
+                }}
+                variant="outline"
+                className="px-6 py-3 transition-all duration-300"
+              >
+                <IconComponent className="mr-2 h-5 w-5" />
+                {layer.name}
+              </Button>
+            );
+          })}
         </div>
 
         {/* Active Layer Display */}
@@ -117,7 +120,9 @@ const PlatformSection: React.FC = () => {
                 className="inline-flex items-center justify-center w-20 h-20 rounded-full mb-6"
                 style={{ backgroundColor: layers[activeLayer].color }}
               >
-                <layers[activeLayer].icon className="h-10 w-10 text-white" />
+                {React.createElement(layers[activeLayer].icon, { 
+                  className: "h-10 w-10 text-white" 
+                })}
               </div>
               <h3 className="text-3xl font-bold text-gray-900 mb-4">
                 {layers[activeLayer].name}
