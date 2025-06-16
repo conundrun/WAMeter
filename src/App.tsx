@@ -14,6 +14,7 @@ import Compliance from "@/pages/Compliance";
 import Profile from "@/pages/Profile";
 import Settings from "@/pages/Settings";
 import NotFound from "@/pages/NotFound";
+import ExceltraLanding from "@/pages/ExceltraLanding";
 
 const queryClient = new QueryClient();
 
@@ -25,8 +26,9 @@ const App = () => (
         <Sonner />
         <BrowserRouter>
           <Routes>
+            <Route path="/" element={<ExceltraLanding />} />
             <Route path="/login" element={<Login />} />
-            <Route path="/" element={<Dashboard />} />
+            <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/test-data" element={<TestDataEntry />} />
             <Route path="/products" element={<Products />} />
             <Route path="/reports" element={<Reports />} />

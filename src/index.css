@@ -44,6 +44,23 @@
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 196 70% 50%;
 
+    /* Exceltra Brand Colors */
+    --exceltra-wameter: 46 91% 58%; /* #2E5BBA */
+    --exceltra-assure: 259 61% 48%; /* #8E44AD */
+    --exceltra-calibrate: 46 91% 58%; /* #2E5BBA */
+    --exceltra-clusters: 188 81% 41%; /* #17A2B8 */
+    --exceltra-predict: 35 84% 52%; /* #F39C12 */
+    
+    /* Traffic Light System */
+    --exceltra-safe: 145 63% 42%; /* #27AE60 */
+    --exceltra-warning: 48 89% 60%; /* #F1C40F */
+    --exceltra-critical: 6 78% 57%; /* #E74C3C */
+    
+    /* Base Colors */
+    --exceltra-navy: 215 64% 15%; /* #1B365D */
+    --exceltra-white: 0 0% 100%; /* #FFFFFF */
+    --exceltra-gray: 210 17% 98%; /* #F8F9FA */
+
     /* Custom colors for the WA-Meter app */
     --critical: 0 84% 60%;
     --warning: 38 92% 50%;
@@ -112,19 +129,57 @@
   }
 }
 
-/* Custom animations */
+/* Enhanced Exceltra Animations */
 @keyframes fade-in {
-  from { opacity: 0; transform: translateY(10px); }
+  from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
+@keyframes slide-in-left {
+  from { opacity: 0; transform: translateX(-30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(46, 91, 186, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(46, 91, 186, 0.6); }
+}
+
+@keyframes molecular-float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  25% { transform: translateY(-15px) rotate(90deg); }
+  50% { transform: translateY(-10px) rotate(180deg); }
+  75% { transform: translateY(-20px) rotate(270deg); }
+}
+
 .animate-fade-in {
-  animation: fade-in 0.3s ease-out forwards;
+  animation: fade-in 0.6s ease-out forwards;
+}
+
+.animate-slide-in-left {
+  animation: slide-in-left 0.8s ease-out forwards;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.animate-molecular {
+  animation: molecular-float 8s ease-in-out infinite;
 }
 
 /* Custom classes */
 .card-hover {
-  @apply transition-transform hover:scale-[1.02] hover:shadow-md;
+  @apply transition-all duration-300 hover:scale-[1.02] hover:shadow-xl;
 }
 
 .stat-card {
@@ -141,4 +196,76 @@
 
 .test-result-critical {
   @apply text-red-600 font-medium;
+}
+
+/* Exceltra Brand Gradient Backgrounds */
+.exceltra-gradient-hero {
+  background: linear-gradient(135deg, #1B365D 0%, #2E5BBA 50%, #1B365D 100%);
+}
+
+.exceltra-gradient-wameter {
+  background: linear-gradient(135deg, #2E5BBA 0%, #4A90C2 100%);
+}
+
+.exceltra-gradient-assure {
+  background: linear-gradient(135deg, #8E44AD 0%, #A569BD 100%);
+}
+
+.exceltra-gradient-clusters {
+  background: linear-gradient(135deg, #17A2B8 0%, #20C2DB 100%);
+}
+
+.exceltra-gradient-predict {
+  background: linear-gradient(135deg, #F39C12 0%, #F5B041 100%);
+}
+
+/* Traffic Light System Classes */
+.traffic-safe {
+  color: #27AE60;
+  background-color: rgba(39, 174, 96, 0.1);
+}
+
+.traffic-warning {
+  color: #F1C40F;
+  background-color: rgba(241, 196, 15, 0.1);
+}
+
+.traffic-critical {
+  color: #E74C3C;
+  background-color: rgba(231, 76, 60, 0.1);
+}
+
+/* Interactive Elements */
+.institutional-badge {
+  @apply transition-all duration-300 hover:scale-105 hover:shadow-lg cursor-pointer;
+}
+
+.platform-layer-card {
+  @apply transition-all duration-500 hover:scale-[1.03] hover:shadow-2xl cursor-pointer;
+}
+
+/* Glassmorphism Effects */
+.glass-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Custom Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(46, 91, 186, 0.6);
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(46, 91, 186, 0.8);
 }
