@@ -32,7 +32,7 @@ const Login: React.FC = () => {
     try {
       setIsLoading(true);
       await login(email, password);
-      navigate('/');
+      navigate('/dashboard');
     } catch (error) {
       console.error("Login error:", error);
       // Toast is already handled in the Auth context
