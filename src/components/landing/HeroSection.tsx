@@ -1,29 +1,18 @@
-
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Building2, University, Shield, Globe } from 'lucide-react';
-
 const HeroSection: React.FC = () => {
   const [currentAward, setCurrentAward] = useState(0);
-  
-  const awards = [
-    "🏆 StartupQC Silver Winner (Quezon City Government Innovation Program)",
-    "💰 Untrod Capital Award (Multinational Deep Technology Investment)",
-    "📱 PLDT Best Technology (Philippines' National Telecom Leader)",
-    "🌏 Leave-A-Nest Finalist (International Deep Tech Commercialization)"
-  ];
-
+  const awards = ["🏆 StartupQC Silver Winner (Quezon City Government Innovation Program)", "💰 Untrod Capital Award (Multinational Deep Technology Investment)", "📱 PLDT Best Technology (Philippines' National Telecom Leader)", "🌏 Leave-A-Nest Finalist (International Deep Tech Commercialization)"];
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentAward((prev) => (prev + 1) % awards.length);
+      setCurrentAward(prev => (prev + 1) % awards.length);
     }, 4000);
     return () => clearInterval(timer);
   }, []);
-
-  return (
-    <section className="min-h-screen bg-gradient-to-br from-[#1B365D] via-[#2E5BBA] to-[#1B365D] text-white relative overflow-hidden">
+  return <section className="min-h-screen bg-gradient-to-br from-[#1B365D] via-[#2E5BBA] to-[#1B365D] text-white relative overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-20 w-32 h-32 bg-white rounded-full animate-pulse"></div>
@@ -86,7 +75,7 @@ const HeroSection: React.FC = () => {
                 <Globe className="text-[#17A2B8] h-8 w-8" />
                 <div>
                   <div className="font-semibold">USAID Research Origin</div>
-                  <div className="text-sm text-blue-200">"US development agency funding breakthrough technologies"</div>
+                  <div className="text-sm text-blue-200">"US development funding breakthrough technologies"</div>
                 </div>
               </div>
             </div>
@@ -169,8 +158,6 @@ const HeroSection: React.FC = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
