@@ -193,7 +193,7 @@ const TestDataEntry: React.FC = () => {
                       
                       <div className="grid grid-cols-2 gap-4">
                         <div>
-                          <Label htmlFor="relativeHumidity">Relative Humidity (%)</Label>
+                          <Label htmlFor="relativeHumidity">Top Metric</Label>
                           <Input
                             id="relativeHumidity"
                             placeholder="e.g. 65.4"
@@ -203,7 +203,7 @@ const TestDataEntry: React.FC = () => {
                         </div>
                         
                         <div>
-                          <Label htmlFor="temperature">Temperature (°C)</Label>
+                          <Label htmlFor="temperature">Bottom Metric</Label>
                           <Input
                             id="temperature"
                             placeholder="e.g. 25.2"
