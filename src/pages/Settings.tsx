@@ -223,16 +223,16 @@ const Settings: React.FC = () => {
           <TabsContent value="devices" className="mt-6">
             <Card>
               <CardHeader>
-                <CardTitle>WA-Meter Devices</CardTitle>
+                <CardTitle>WAMETER Devices</CardTitle>
                 <CardDescription>
-                  Manage your connected WA-Meter devices
+                  Manage your connected WAMETER devices
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
                   <div className="flex justify-between items-center py-4 border-b">
                     <div>
-                      <h3 className="font-medium">WA-Meter #12345</h3>
+                      <h3 className="font-medium">WAMETER #12345</h3>
                       <p className="text-sm text-muted-foreground">Added on Jan 15, 2023</p>
                     </div>
                     <div className="flex gap-2">
@@ -245,7 +245,7 @@ const Settings: React.FC = () => {
                   
                   <div className="flex justify-between items-center py-4 border-b">
                     <div>
-                      <h3 className="font-medium">WA-Meter #12346</h3>
+                      <h3 className="font-medium">WAMETER #12346</h3>
                       <p className="text-sm text-muted-foreground">Added on Mar 22, 2023</p>
                     </div>
                     <div className="flex gap-2">

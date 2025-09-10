@@ -153,7 +153,7 @@ const TestDataEntry: React.FC = () => {
                 <CardHeader>
                   <CardTitle>Test Data Entry</CardTitle>
                   <CardDescription>
-                    Enter the readings from your WA-Meter device
+                    Enter the readings from your WAMETER device
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -292,7 +292,7 @@ const TestDataEntry: React.FC = () => {
                       </div>
                       <h3 className="text-lg font-medium mb-2">No Calculation Yet</h3>
                       <p className="text-muted-foreground">
-                        Enter the relative humidity and temperature readings from your WA-Meter device,
+                        Enter the relative humidity and temperature readings from your WAMETER device,
                         then click "Calculate Water Activity"
                       </p>
                     </div>

@@ -21,14 +21,14 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
 
   useEffect(() => {
     // Check for saved user in localStorage (simulating persistence)
-    const savedUser = localStorage.getItem('wa-meter-user');
+    const savedUser = localStorage.getItem('exceltra-user');
     if (savedUser) {
       try {
         const parsedUser = JSON.parse(savedUser);
         setUser(parsedUser);
       } catch (e) {
         console.error("Failed to parse saved user");
-        localStorage.removeItem('wa-meter-user');
+        localStorage.removeItem('exceltra-user');
       }
     }
     setIsLoading(false);
@@ -46,7 +46,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     if (foundUser) {
       // In a real app, you would verify the password here
       setUser(foundUser);
-      localStorage.setItem('wa-meter-user', JSON.stringify(foundUser));
+      localStorage.setItem('exceltra-user', JSON.stringify(foundUser));
       toast({
         title: "Login successful",
         description: `Welcome back, ${foundUser.name}!`,
@@ -65,7 +65,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
 
   const logout = () => {
     setUser(null);
-    localStorage.removeItem('wa-meter-user');
+    localStorage.removeItem('exceltra-user');
     toast({
       title: "Logged out",
       description: "You have been logged out successfully.",
