@@ -6,7 +6,7 @@ export const mockUsers: User[] = [
   {
     id: "u1",
     name: "John Doe",
-    email: "john@saintechnologies.com",
+    email: "john@exceltra.com",
     role: UserRole.Admin,
     companyId: "c1",
     createdAt: new Date("2023-01-15")
@@ -14,7 +14,7 @@ export const mockUsers: User[] = [
   {
     id: "u2",
     name: "Maria Santos",
-    email: "maria@saintechnologies.com",
+    email: "maria@exceltra.com",
     role: UserRole.Technician,
     companyId: "c1",
     createdAt: new Date("2023-02-20")
@@ -22,7 +22,7 @@ export const mockUsers: User[] = [
   {
     id: "u3",
     name: "Robert Chen",
-    email: "robert@saintechnologies.com",
+    email: "robert@exceltra.com",
     role: UserRole.Manager,
     companyId: "c1",
     createdAt: new Date("2023-03-10")
@@ -33,7 +33,7 @@ export const mockUsers: User[] = [
 export const mockCompanies: Company[] = [
   {
     id: "c1",
-    name: "SAIN Technologies",
+    name: "Exceltra",
     industry: "Food Manufacturing",
     subscription: "premium",
     address: "Cebu City, Philippines",

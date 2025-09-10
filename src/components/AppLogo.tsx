@@ -22,12 +22,12 @@ const AppLogo: React.FC<AppLogoProps> = ({ size = 'md', withText = true }) => {
   return (
     <div className="flex items-center gap-2">
       <div className={`${logoSizes[size]} flex items-center justify-center rounded-md bg-primary text-primary-foreground font-bold`}>
-        <span>WA</span>
+        <span>EX</span>
       </div>
       {withText && (
         <div className="flex flex-col">
-          <span className={`${textSizes[size]} font-bold leading-none`}>WA-Meter</span>
-          <span className="text-xs text-muted-foreground">by SAIN</span>
+          <span className={`${textSizes[size]} font-bold leading-none`}>ASSURE</span>
+          <span className="text-xs text-muted-foreground">by Exceltra</span>
         </div>
       )}
     </div>

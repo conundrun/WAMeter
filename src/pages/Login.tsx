@@ -43,9 +43,9 @@ const Login: React.FC = () => {
 
   // Demo accounts
   const demoAccounts = [
-    { email: "john@saintechnologies.com", role: "Admin" },
-    { email: "maria@saintechnologies.com", role: "Technician" },
-    { email: "robert@saintechnologies.com", role: "Manager" }
+    { email: "john@exceltra.com", role: "Admin" },
+    { email: "maria@exceltra.com", role: "Technician" },
+    { email: "robert@exceltra.com", role: "Manager" }
   ];
 
   const setDemoAccount = (email: string) => {
@@ -72,7 +72,7 @@ const Login: React.FC = () => {
           <CardHeader>
             <CardTitle>Login</CardTitle>
             <CardDescription>
-              Access your WA-Meter dashboard and test data
+              Access your ASSURE dashboard and test data
             </CardDescription>
           </CardHeader>
           <CardContent>
